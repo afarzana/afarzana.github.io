@@ -1,51 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>TML-Home</title>
-    <meta name="description" content="Amateur Photography">
-    <link href="tmlstyle.css" rel="stylesheet">
+    <title>My calculator</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="mycalcstyle.css" rel="stylesheet">
 </head>
-
 <body>
-    <div class="header">
-        <div class="titlecontainer">
-            <h1>Through My Lens</h1>
-        </div>
-        <div class="logocontainer">
-            <img src="sig.jpg">
-        </div>
-    </div>
-    <div class="underheadercontainer">
-        <div class="sidebar">
-            <a href="index.html">Home</a>
-            <a href="tmlab.html">Alberta</a>
-            <a href="tmlbc.html">British Columbia</a>
-            <a href="tmlon.html">Ontario</a>
-        </div>
-        <div class="contentcontainer">
-            <div class="textbox">
-                <p>
-                    Welcome to my website where I showcase my
-                    amateur photography. The photographs are
-                    all taken in the beautiful country of Canada.
-                    I have categorized them by province, so take
-                    a look!
-                </p>
-            </div>
-            <div class="textbox">
-                <p>
-                    Some things about me:
-                </p>
-                <ul type="circle">
-                    <li>Photography is a side hobby of mine</li>
-                    <li>I mostly like taking landscapes without anyone in them >_<</li>
-                    <li>I also like taking candid pictures of people I travel with</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</body>
 
+    <div class="calccontainer border border-dark rounded h-100">
+        <div class="container-fluid h-100 w-100">
+            <div class="row h-25">
+                <div class="col-12 col-plr">
+                    <form id="inputform">
+                        <div class="form-group">
+                            <label class="ta w-100" for="calc-screen" id="calc-history">...</label>
+                            <input type="text" class="form-control form-control-lg ta" id="calc-screen">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row row-mb-h">
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn(" value="(" class="btn btn-info btn-block">(</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn)" value=")" class="btn btn-info btn-block">)</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btnCE" value="backspace" class="btn btn-info btn-block">CE</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btnC" value="clear" class="btn btn-info btn-block">C</button>
+                </div>
+            </div>
+            <div class="row row-mb-h">
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn7" value="7" class="btn btn-secondary btn-block">7</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn8" value="8" class="btn btn-secondary btn-block">8</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn9" value="9" class="btn btn-secondary btn-block">9</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn/" value="/" class="btn btn-info btn-block">/</button>
+                </div>
+            </div>
+            <div class="row row-mb-h">
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn4" value="4" class="btn btn-secondary btn-block">4</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn5" value="5" class="btn btn-secondary btn-block">5</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn6" value="6" class="btn btn-secondary btn-block">6</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btnx" value="*" class="btn btn-info btn-block">x</button>
+                </div>
+            </div>
+            <div class="row row-mb-h">
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn1" value="1" class="btn btn-secondary btn-block">1</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn2" value="2" class="btn btn-secondary btn-block">2</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn3" value="3" class="btn btn-secondary btn-block">3</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn-" value="-" class="btn btn-info btn-block">-</button>
+                </div>
+            </div>
+            <div class="row row-mb-h">
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn0" value="0" class="btn btn-secondary btn-block">0</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn." value="." class="btn btn-secondary btn-block">.</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btneq" value="evaluate" class="btn btn-dark btn-block">=</button>
+                </div>
+                <div class="col-3 col-plr">
+                    <button type="button" id="btn+" value="+" class="btn btn-info btn-block">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="mycalclogic.js"></script>
+</body>
 </html>
