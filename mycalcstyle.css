@@ -1,0 +1,52 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+}
+
+.calccontainer{
+    padding: 1.5%;
+    background: white;
+}
+
+.row-mb-h{
+    margin-bottom: 2%;
+    height: 12%;
+}
+
+.col-plr{
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+.ta{
+    text-align: right;
+
+}
+
+@media(min-width: 768px) {
+
+    .calccontainer{
+        width: 600px;
+    }
+    body{
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        background-image: url("bg.jpg");
+    }
+}
+
+@media(max-width: 768px) {
+
+    .calccontainer{
+        width: 100%;
+    }
+
+}
